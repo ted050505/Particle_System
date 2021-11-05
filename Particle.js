@@ -1,9 +1,10 @@
 class Particle {
   constructor(x, y) {
     this.pos = createVector(x, y);
-    this.vel = createVector(0, 0);
+    this.vel = p5.Vector.random2D();
+    this.vel.mult(random(0.5, 2));
     this.acc = createVector(0, 0);
-    this.r = 15;
+    this.r = 5;
 
     this.lifetime = 255;
   }
@@ -36,7 +37,8 @@ class Particle {
   }
 
   display() {
-    stroke(255, this.lifetime);
+    // stroke(255, this.lifetime);
+    noStroke();
     strokeWeight(2);
     fill(255, this.lifetime);
 
