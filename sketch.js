@@ -18,4 +18,11 @@ function draw() {
     particle.update();
     particle.display();
   }
+
+  for(let i = particles.length-1; i >= 0; i--) {
+    if(particles[i].finshed()) {
+      particles.splice(i, 1);)
+    }
+  }
+
 }
