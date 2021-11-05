@@ -9,6 +9,10 @@ class Particle {
     this.lifetime = 255;
   }
 
+  finished() {
+    return (this.lifetime < 0);
+  }
+
   applyForce(force) {
     this.acc.add(force);
   }
