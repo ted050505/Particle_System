@@ -3,7 +3,6 @@ let emitters = [];
 
 function mousePressed() {
   emitters.push(new Emitter(mouseX, mouseY));
-  emitters.update_color();
 }
 
 function setup() {
